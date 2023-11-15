@@ -222,15 +222,81 @@
 #it works like that
 #while condition == True -> do your job
 
-i = 0 #define starting value of variable
+# i = 0 #define starting value of variable
 # while i < 10: #while i < 10 == Ture print run
 #     print('run')
 #     i += 1 #after printing run once add 1 to i and check condition again, it will work as long as i not > 10
 
 #we can write it like that as well:
-x = 0
-while True:
-    print('run')
-    x += 1
-    if i == 10:
-        break
+# x = 0 #x equal 0
+# while True: #run it always
+#     print('run') #run
+#     x += 1 #add 1 to x
+#     if x == 10: #if x reaches 10
+#         break #break the nearet while loop it will be this one it is in right now
+
+#SLICE OPERATOR
+#allows to take a slice of collections and do something with it 
+# x = [0,1,2,3,4,5,6,7,8]
+# y = ['hi','hello','goodbye','cya','sure']
+# s = 'hello'
+
+#sliced = [start:stop:step]
+
+# sliced = x[0:4:2] #empty space means for start to start from the 0, for stop to go to the end, for step jump by 1
+# print(sliced)
+# sliced2 = x[::-1] #it will reverse the part we put into slice
+# print(sliced2)
+# string_revers = s[::-1] #it works on list,strings and tuples
+# print(string_revers)
+
+#SETS
+#sets are unordered uniqe collections of elements, thats mean that elements in sets aren't indexed
+#it doesn't care about duplicatns, track order or frequency of elements
+#all wwe care about is if something is there or not
+#it's very fast collection for example removing something from the list have to move elements and keep track of 
+#their positions in case of sets it just removes or adds something
+#use only when you care if something exists or not
+# x = set()
+# #or but it is not popular version cuz of dictionary
+# y = {1,2,3,4,5,6,7,8,9,7,6,5,4,3}
+# #it's okay when we are not creating an empty set, cuz the empty one wrote like that create dictionary
+# print(y)
+# y.add(15) #add to the set| use remove() if you want to remove uniqe element from the set
+# print(y)
+# print(4 in y)#it will tell us if something is in the set
+# #sets are relly much faster if you want to check if something is in, add or remove when compared to other collections
+# s1 = {4,32,2,2}
+# s2 = {3,4,22,1}
+# print(s1.union(s2)) #it will join two sets to create set of all elements|adds uniqe elements from s2 to s1
+# print(s1.difference(s2)) #it will print what elemnts are diffrent in s1 comparing to s2
+# print(s2.difference(s1)) #prove of diffrent results 
+# print(s1.intersection(s2)) #it will print what is similar between sets
+# print(s1.symmetric_difference(s2)) #print all elements that are diffrent between them but without the ones that are same
+
+#DICTIONARIES
+#key value pair
+#x = {'key':'value'} value can be any data from int, string to list, tuples etc
+
+x = {'key': 4}
+print(x['key']) #it will print a value of key named in that case "key"
+
+x['key2'] = 5 #you can define new keyvalue pair outside a dictionary
+
+print(x)
+
+x[2] = 7 #name of the key doesn't need to be a string and value can be anything 
+print(x)
+
+#it is very fast cuz it uses hash value, you could almost assume it is in constant time working almost like sets
+#there might be hash collisions
+
+print('key' in x) #check if something is in dictionary
+print(x.values()) #it will print all values of dictionary
+print(list(x.values())) #it will print all values of dictionary in a list which is better to use
+print(list(x.keys())) #lists of all keys 
+print(list(x.items()))
+#del x['key'] #it will remove a keyvalue pair named in ()
+
+for key,value in x.items():
+    print(key,value)
