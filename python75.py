@@ -278,25 +278,31 @@
 #key value pair
 #x = {'key':'value'} value can be any data from int, string to list, tuples etc
 
-x = {'key': 4}
-print(x['key']) #it will print a value of key named in that case "key"
+# x = {'key': 4}
+# print(x['key']) #it will print a value of key named in that case "key"
 
-x['key2'] = 5 #you can define new keyvalue pair outside a dictionary
+# x['key2'] = 5 #you can define new keyvalue pair outside a dictionary
 
-print(x)
+# print(x)
 
-x[2] = 7 #name of the key doesn't need to be a string and value can be anything 
-print(x)
+# x[2] = 7 #name of the key doesn't need to be a string and value can be anything 
+# print(x)
 
-#it is very fast cuz it uses hash value, you could almost assume it is in constant time working almost like sets
-#there might be hash collisions
+# #it is very fast cuz it uses hash value, you could almost assume it is in constant time working almost like sets
+# #there might be hash collisions
 
-print('key' in x) #check if something is in dictionary
-print(x.values()) #it will print all values of dictionary
-print(list(x.values())) #it will print all values of dictionary in a list which is better to use
-print(list(x.keys())) #lists of all keys 
-print(list(x.items()))
-#del x['key'] #it will remove a keyvalue pair named in ()
+# print('key' in x) #check if something is in dictionary
+# print(x.values()) #it will print all values of dictionary
+# print(list(x.values())) #it will print all values of dictionary in a list which is better to use
+# print(list(x.keys())) #lists of all keys 
+# print(list(x.items())) #it will print a list of keyvalues pairs
+# #del x['key'] #it will remove a keyvalue pair named in ()
 
-for key,value in x.items():
-    print(key,value)
+# for key,value in x.items(): #it will iterate through x and return all key value pairs
+#     print(key,value)
+
+# #other option to do the same as above is
+# for key in x:
+#     print(key, x[key])
+
+#COMPREHENSIONS
