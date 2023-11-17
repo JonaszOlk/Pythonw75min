@@ -367,5 +367,6 @@
 # print(jasbhj(4,2)) #here z is automaticly 1
 # print(jasbhj(4,2,5)) #here z is overwriten from 1 to 5
 
+#*ARGS AND **KWARGS
 
 
