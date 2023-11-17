@@ -306,3 +306,66 @@
 #     print(key, x[key])
 
 #COMPREHENSIONS
+#one line initialization of the list, tuple dict and etc
+# x = [x for x in range(5)] #x is list in which we have in one line creted a for loop inside list
+# print(x)
+# y = [y + 5 for y in range(5)] #it will add to the list a thing on the left side in that case from 0 to 4 and +5
+# print(y)
+# z = [z % 3 for z in range(10)] #it will add to the list 0 to 9 % by 3 so 0 1 2 0 1 2 (...)
+# print(z)
+# # t = [[0 for t in range(100)] for t in range(5)] #it will create a list of 100 zeros 5 times
+# # print(t)
+# ad = [ i for i in range(101) if i % 5 == 0] #it will create a list of i in range 0-100 if i is divided by 5 without rest
+# print(ad)
+# dicad = {i:0 for i in range(101) if i % 5 == 0} #we can create a dictionary like that too with keys from above 
+# print(dicad)#and values equal 0 for everything
+# alks = {i for i in range(191) if i % 3 == 2} #here we have a set, cuz there is no key values pair of numbers in range
+# print(alks)# from 0 to 190 that divided by 3 will give a rest equal 2
+# posk = tuple(i *2 + 3 for i in range(10) if i % 2 == 0)#here is a tuple it have to start with tuple cuz in other case
+# print(posk) # it will create a generator object
+
+#FUNCTIONS
+#functions are objects so you can technicly return them to the program
+#to create a function you have to define it
+# def func(): #def then name of the function and in () you can put some information for function to work with
+#     print("Run")
+
+# func()
+# #You can put a function inside a function:
+# def pol(): #define outer function
+#     print(2+3+3+4,end=" ") #what it does
+#     def sal(): #def inner function
+#         print("run") #what it does
+#     sal() #call inner function in lines of outer function to work when outer function is called
+
+# pol() #calling outer function and inner function will work as well
+
+#  #now putting variables in functions
+# def qwer(x,y): #we are def and name a function with variables in ()
+#     print("The value of adding yours number is: ",end="") #this is what it does
+#     print(x + y) #here the function is using our variables
+
+# qwer(7,9) #we are calling our function so we have to give values asigned to variables x  and y
+# #With return function
+# def hasghs(i,p): #den function with variables i and p
+#     print("Running operations with:",i,p) #print for us what numbers we are using
+#     return i*p,i/p,i+p #math operations returned
+
+# print(hasghs(10,5)) #without print it won't show what are the results of returned operations #it will be given in
+# #a tuple version of answer 
+# #to unpack a tuple we can just do it like that:
+# r1,r2,r3=hasghs(10,5) #it will return them as numbers int and float in that case and print msg
+# print(r1,r2,r3)
+# #we could as well index the tuple but version above is cleaner with shorter collections of data
+# print(hasghs(10,5)[0])
+
+# #you can add optional variable and give it starting value of None or any other option
+# def jasbhj(x,y,z=1):
+#     print('run',x,y,z)
+#     return(x*y*z,x*z/y)
+
+# print(jasbhj(4,2)) #here z is automaticly 1
+# print(jasbhj(4,2,5)) #here z is overwriten from 1 to 5
+
+
+
